@@ -12,9 +12,9 @@ interface FavouriteDao {
 
     // Inserting the Coin
     @Insert(onConflict =  OnConflictStrategy.IGNORE)
-    suspend fun addFavourite(data: FavouriteEntity)
+     fun addFavourite(data: FavouriteEntity)
 
     // Deleting the Coin
     @Delete
-    suspend fun delFavourite(data: FavouriteEntity)
+     fun delFavourite(data: FavouriteEntity)
 }

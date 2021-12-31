@@ -8,7 +8,7 @@ interface TransactionDao {
 
     // Inserting into DB
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addToTransaction(transactionEntity: TransactionEntity)
+     fun addToTransaction(transactionEntity: TransactionEntity)
 
     //GETTING FROM DB
     @Query("SELECT * FROM transaction_Table ORDER BY date DESC")
@@ -16,5 +16,5 @@ interface TransactionDao {
 
     //DELETING ALL THE TRANSACTION
     @Query("DELETE FROM transaction_table")
-    suspend fun deleteAllTransaction()
+     fun deleteAllTransaction()
 }
